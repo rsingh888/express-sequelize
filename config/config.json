@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": "nimda",
-    "database": "sakila",
+    "database": "world",
     "host": "127.0.0.1",
     "dialect": "mysql",
     "operatorsAliases": false,

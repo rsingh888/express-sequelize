@@ -6,8 +6,11 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var actorsRouter = require('./routes/actors');
-var citiesRouter = require('./routes/cities');
+// var actorsRouter = require('./routes/actors');
+
+//Dyanmically added line
+var cityRouter = require('./routes/city');
+var countryRouter = require('./routes/country');
 
 var app = express();
 
@@ -23,10 +26,15 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/actors', actorsRouter);
-app.use('/actors/:id', actorsRouter);
-app.use('/cities', citiesRouter);
-app.use('/cities/:id', citiesRouter);
+// app.use('/actors', actorsRouter);
+// app.use('/actors/:id', actorsRouter);
+
+//Dynamically added line
+app.use('/city', cityRouter);
+app.use('/city/:id', cityRouter);
+
+app.use('/country', countryRouter);
+app.use('/country/:id', countryRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

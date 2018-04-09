@@ -1,0 +1,21 @@
+var express = require('express');
+var router = express.Router();
+var {{=param.modelName}} = require('.././models/{{=param.modelName}}');
+var models = require('.././models');
+
+/* GET users listing. */
+router.get('/', function(req, res, next) {
+  var {{=param.modelName}} = models.{{=param.modelName}};
+  {{=param.modelName}}.findAll().then({{=param.modelName}} => {
+    res.send({{=param.modelName}});
+  })  
+});
+
+router.get('/:id', function(req, res, next) {
+  var {{=param.modelName}} = models.{{=param.modelName}};
+  {{=param.modelName}}.find({where: {city_id: req.params.id}}).then({{=it.modelName}} => {
+    res.send({{=param.modelName}});
+  })
+});
+
+module.exports = router;
