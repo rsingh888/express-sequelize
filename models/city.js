@@ -33,6 +33,7 @@ module.exports = function(sequelize, DataTypes) {
 			defaultValue: '0'
 		}
 	}, {
-		tableName: 'city'
+		tableName: 'city',
+		timestamps: false
 	});
 };

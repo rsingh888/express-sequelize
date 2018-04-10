@@ -1,0 +1,8 @@
+//Dynamically added line starts
+
+var {{modelName}}Router = require('./routes/{{modelName}}');
+
+app.use('/{{modelName}}', {{modelName}}Router);
+app.use('/{{modelName}}/:id', {{modelName}}Router);
+
+//Dynamically added Ends

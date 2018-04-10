@@ -73,6 +73,7 @@ module.exports = function(sequelize, DataTypes) {
 			defaultValue: ''
 		}
 	}, {
-		tableName: 'country'
+		tableName: 'country',
+		timestamps: false
 	});
 };
